@@ -46,7 +46,7 @@ function Dashboard({ children }) {
         <Header className="site-layout-background" style={{ padding: 0 }} />
         <Content style={{ margin: "0 16px" }}>{children}</Content>
         <Footer style={{ textAlign: "center" }}>
-          Ant Design ©2018 Created by Ant UED
+          Admin Crops ©2021 Created by Nguyen Thi Thu Trang
         </Footer>
       </Layout>
     </Layout>

@@ -1,8 +1,8 @@
 import React from "react";
-import User from "../../../src/components/admin/User";
+import MangageListUser from "../../../src/components/admin/User/list";
 
 function IndexUser() {
-  return <User />;
+  return <MangageListUser />;
 }
 
 export default IndexUser;
