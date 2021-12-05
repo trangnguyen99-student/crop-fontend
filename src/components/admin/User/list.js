@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import User from "./index";
 import { Table, Tag, Space } from "antd";
+import { Modal } from "antd";
 
 function MangageListUser() {
+  const [showModalEdit, setShowModalEdit] = useState(false);
   const columns = [
     {
       title: "Name",
@@ -45,7 +47,8 @@ function MangageListUser() {
       key: "action",
       render: () => (
         <Space size="middle">
-          <a>Create</a>
+          <a onClick={() => setShowModalEdit(true)}>Detail</a>
+          <a onClick={() => setShowModalEdit(true)}>Edit</a>
           <a>Delete</a>
         </Space>
       ),
@@ -75,10 +78,24 @@ function MangageListUser() {
       tags: ["cool", "teacher"],
     },
   ];
+
+  const handleOk = () => {
+    setShowModalEdit(false);
+  };
   return (
     <User url="Manage">
       <h2>Quản lý danh sách người dùng</h2>
       <Table columns={columns} dataSource={data} />
+      <Modal
+        title="Chỉnh sửa người dùng"
+        visible={showModalEdit}
+        onOk={handleOk}
+        onCancel={() => setShowModalEdit(false)}
+      >
+        <p>Some contents...</p>
+        <p>Some contents...</p>
+        <p>Some contents...</p>
+      </Modal>
     </User>
   );
 }
