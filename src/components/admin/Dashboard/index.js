@@ -4,6 +4,7 @@ import {
   PieChartOutlined,
   FileOutlined,
   UserOutlined,
+  SlackOutlined,
 } from "@ant-design/icons";
 import Link from "next/link";
 import { useRouter } from "next/router";
@@ -34,11 +35,11 @@ function Dashboard({ children }) {
           <Menu.Item key="admin" icon={<PieChartOutlined />}>
             <Link href="/admin/">Dashboard</Link>
           </Menu.Item>
+          <Menu.Item key="crop" icon={<SlackOutlined />}>
+            <Link href="/admin/crop">Crops</Link>
+          </Menu.Item>
           <Menu.Item key="user" icon={<UserOutlined />}>
             <Link href="/admin/user">User</Link>
-          </Menu.Item>
-          <Menu.Item key="9" icon={<FileOutlined />}>
-            Files
           </Menu.Item>
         </Menu>
       </Sider>

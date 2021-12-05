@@ -2,7 +2,11 @@ import React from "react";
 import Dashboard from "../Dashboard";
 import { Breadcrumb } from "antd";
 
-function User({ children, url }) {
+if (typeof document === "undefined") {
+  React.useLayoutEffect = React.useEffect;
+}
+
+function Crops({ children, url }) {
   return (
     <Dashboard>
       <Breadcrumb style={{ margin: "16px 0" }}>
@@ -19,4 +23,4 @@ function User({ children, url }) {
   );
 }
 
-export default User;
+export default Crops;

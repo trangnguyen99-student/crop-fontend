@@ -1,13 +1,13 @@
 import React, { useState } from "react";
-import User from "./index";
 import { Table, Tag, Space } from "antd";
 import CreateUser from "./create";
 import EditUser from "./edit";
 import DeleteUser from "./delete";
 import { EyeOutline, PencilOutline, CloseOutline } from "react-ionicons";
 import DetailUser from "./detail";
+import Crops from "./index";
 
-function MangageListUser() {
+function MangageListCrops() {
   const [showModalCreate, setShowModalCreate] = useState(false);
   const [showModalDetail, setShowModalDetail] = useState(false);
   const [showModalEdit, setShowModalEdit] = useState(false);
@@ -108,9 +108,9 @@ function MangageListUser() {
   ];
 
   return (
-    <User url="Users">
+    <Crops url="Crops">
       <div>
-        <h2>Quản lý danh sách người dùng</h2>
+        <h2>Quản lý danh sách cây trồng</h2>
       </div>
       <Table columns={columns} dataSource={data} />
       <DetailUser
@@ -129,8 +129,8 @@ function MangageListUser() {
         showModal={showModalDelete}
         setShowModal={(value) => setShowModalDelete(value)}
       />
-    </User>
+    </Crops>
   );
 }
 
-export default MangageListUser;
+export default MangageListCrops;
